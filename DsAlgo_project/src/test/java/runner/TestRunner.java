@@ -9,11 +9,13 @@ import io.cucumber.junit.Cucumber;
 //@RunWith(Cucumber.class) //Junit execution
 
 	@CucumberOptions(
-			plugin = {"pretty", "html:target/priya.html"}, //reporting purpose
+		//	plugin = {"pretty","html:target/priya.html"}, //reporting purpose
+			plugin = "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			monochrome=false,  //console output color
-			tags = "@tag", //tags from feature file
+			tags = "@dsalgo", //tags from feature file
+//			dryRun = true,  // To add new method give dryRun true
 			features = {"src/test/resources/features"}, //location of feature files
-			glue= "stepDefinition") //location of step definition files
+			glue= {"stepDefinition","ApplicationHooks"}) //location of step definition files
 
 
 	public class TestRunner extends AbstractTestNGCucumberTests{
