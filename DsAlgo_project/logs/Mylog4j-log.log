@@ -1,0 +1,7 @@
+[INFO ]2023-10-3015:56:33.745[main]Utilities.LoggerLoad1)---------Testing Info--------
+[WARN ]2023-10-3015:56:33.751[main]Utilities.LoggerLoad1)---------Testing Warn--------
+[ERROR]2023-10-3015:56:33.751[main]Utilities.LoggerLoad1)--------Testing Error--------
+[INFO ]2023-10-3016:17:42.545[main]Utilities.LoggerLoad1)---------Testing Info--------
+[WARN ]2023-10-3016:17:42.556[main]Utilities.LoggerLoad1)---------Testing Warn--------
+[ERROR]2023-10-3016:17:42.557[main]Utilities.LoggerLoad1)--------Testing Error--------
+[INFO ]2023-10-3019:30:13.917[main]Utilities.LoggerLoad1)-Testing on chrome

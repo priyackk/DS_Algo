@@ -1,0 +1,18 @@
+package Utilities;
+
+import Utilities.LoggerLoad;
+
+public class LoggerTest {
+
+	public void test01() throws InterruptedException {
+		// if want to display info message
+		LoggerLoad.info("--------Testing Info--------");
+
+		// If want to display warn message
+		LoggerLoad.warn("--------Testing Warn--------");
+
+		// if want to display error message
+		LoggerLoad.error("-------Testing Error--------");
+	}
+
+}

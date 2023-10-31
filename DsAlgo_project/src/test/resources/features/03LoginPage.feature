@@ -4,10 +4,9 @@ Feature: Test Login Page
 
   @tag1
   Scenario Outline: Check login is successful with valid credentials
-    Given browser is open
+    Given User enters login page
     When User enters <username> and <password>
-    And user clicks on login
-    Then User navigates to home page
+    Then User successfully logged in
 
     Examples: 
       | username | password   |

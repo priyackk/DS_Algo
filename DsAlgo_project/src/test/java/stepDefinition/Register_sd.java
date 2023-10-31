@@ -1,19 +1,15 @@
 package stepDefinition;
-
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import DriverFactory.DriverInstance;
+import PageObjects.RegisterPage_pom;
+import Utilities.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Register_sd extends DriverInstance{
-	
-	String URL = "https://dsportalapp.herokuapp.com/register";
+public class Register_sd extends BaseClass{
+		
+ /*	String URL = "https://dsportalapp.herokuapp.com/register";
 	
 	By registerBtn2 = By.xpath("//input[@value='Register']");
 	By userName = By.xpath("//input[@name='username']");
@@ -21,18 +17,60 @@ public class Register_sd extends DriverInstance{
 	By passwordConfirmation = By.xpath("//input[@name='password2']");
 	By accountCreated_text = By.xpath("//div[@class='alert alert-primary']");
 	By signOutBtn = By.xpath("//a[text()='Sign out']");
-
+	
+	*/
 
 	
 	@Given("User is in the register page")
 	public void user_is_in_the_register_page() {
 		
-		driver.get(URL);
-
+		BaseClass.registerPageUrl();
+		 
 	    	}
 
 	@When("Exploring the register page")
-	public void exploring_the_register_page() throws InterruptedException{
+	public void exploring_the_register_page() {
+		
+		  new RegisterPage_pom().registerBtn2()
+		  
+		    .userNameBtn("Ann")
+		    .registerBtn2()
+		    .userNameBtn("Ann")
+		    .passwordBtn("Ann1234")
+		    .registerBtn2()
+		    
+		    .userNameBtnClear()
+		    .userNameBtn("!#*$")
+		    .registerBtn2()
+		    .passwordBtnClear()
+		    .passwordBtn("Ann1234")
+		    .passwordConfirmation("Ann1234")
+		    
+		    .userNameBtn("!#*$")
+		    .passwordBtn("Ann1234")
+		    .passwordConfirmation("Ann123456")
+		    .registerBtn2()
+		    
+		    .userNameBtn("!#*$")
+		    .passwordBtn("Ann12")
+		    .passwordConfirmation("Ann12")
+		    .registerBtn2()
+
+
+		    .userNameBtn("!#*$")
+		    .passwordBtn("12345678")
+		    .passwordConfirmation("12345678")
+		    .registerBtn2()
+		    
+		    .userNameBtn("Anniec")
+		    .passwordBtn("Ann123456")
+		    .passwordConfirmation("Ann123456")
+		    .registerBtn2();
+		  
+	}
+	
+	
+		/*
 		driver.findElement(registerBtn2).click();
 		driver.findElement(userName).sendKeys("Ann");
 		driver.findElement(registerBtn2).click();
@@ -68,14 +106,16 @@ public class Register_sd extends DriverInstance{
 		driver.findElement(passwordConfirmation).sendKeys("Ann123456");
 		driver.findElement(registerBtn2).click(); 
 		Thread.sleep(1000);
-
-		
-	    	}
+		*/
+	
+	    	
 
 	@Then("User created account succesfully")
 	public void User_created_account_succesfully() {
 		
-		driver.findElement(accountCreated_text).isDisplayed();
+	BaseClass.msg_text();
+		
+	//	driver.findElement(accountCreated_text).isDisplayed();
 		
 	}
 

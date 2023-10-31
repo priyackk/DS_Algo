@@ -9,7 +9,6 @@ Background:
 
   @tag1
   Scenario Outline: User tests graph with simple python code
-    When User clicks graph button to test correct input
     And User tests graph page and enters <input> in text editor box and gives <expectedOutput> 
     Then Graph page completed for correct input
 

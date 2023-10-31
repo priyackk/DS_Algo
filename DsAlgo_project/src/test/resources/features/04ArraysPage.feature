@@ -9,7 +9,6 @@ Feature: Test Array Datastructure
 
   @tag1
   Scenario Outline: User tests array with simple python code
-    When User clicks array button to test correct input
     And User tests array page enters <input> in text editor box and it gives <expectedOutput>
     Then Array page completed for correct input
 
