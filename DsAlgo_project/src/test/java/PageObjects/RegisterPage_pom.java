@@ -10,8 +10,6 @@ public class RegisterPage_pom extends BaseClass {
 	By userNameBtn = By.xpath("//input[@name='username']");
 	By passwordBtn = By.xpath("//input[@name='password1']");
 	By passwordConfirmation = By.xpath("//input[@name='password2']");
-//	By msg_text = By.xpath("//div[@class='alert alert-primary']");
-	By signOutBtn = By.xpath("//a[text()='Sign out']");
 
 	public registerBtn2BrL registerBtn2() {
 
@@ -55,11 +53,5 @@ public class RegisterPage_pom extends BaseClass {
 
 	}
 
-	public RegisterPage_pom signOutBtn() {
-
-		driver.findElement(signOutBtn).click();
-		return this;
-
-	}
 
 }

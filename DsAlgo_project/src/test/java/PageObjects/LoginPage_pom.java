@@ -25,23 +25,21 @@ public class LoginPage_pom extends BaseClass {
 
 	}
 
-	public LoginPage loginBtn() {
+	public loginBtnpage loginBtn() {
 
 		driver.findElement(loginBtn).click();
-		return new LoginPage();
+		return new loginBtnpage();
 
 	}
-	
-	public LoginPage_pom login(String username,String password) {
-		
-		driver.findElement(signIn_userName).sendKeys(username);
-		driver.findElement(signIn_passwordBtn).sendKeys(password);
-		driver.findElement(loginBtn).click();
-		return this;
 
+	/*
+	 * public LoginPage_pom login(String username,String password) {
+	 * 
+	 * driver.findElement(signIn_userName).sendKeys(username);
+	 * driver.findElement(signIn_passwordBtn).sendKeys(password);
+	 * driver.findElement(loginBtn).click(); return this;
+	 * 
+	 * }
+	 */
 
-		
-	}
-
-	
 }

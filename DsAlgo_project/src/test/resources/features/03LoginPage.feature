@@ -9,6 +9,6 @@ Feature: Test Login Page
     Then User successfully logged in
 
     Examples: 
-      | username | password   |
-      | Abcdef   | Abcdef@123 |
-      | John     | John@1234  |
+      | username     | password   |
+      | Abcdef       | Abcdef@123 |
+      | TechieNinjas | Techie@132 |

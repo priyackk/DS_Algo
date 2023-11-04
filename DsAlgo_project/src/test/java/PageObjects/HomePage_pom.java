@@ -12,8 +12,7 @@ public class HomePage_pom extends BaseClass {
 	By dropDownBtn = By.xpath("//a[@class='nav-link dropdown-toggle']");
 	By getStarted_DS = By.xpath("//div[@class='row row-cols-1 row-cols-md-3 g-4']//div[1]/a");
 	By dropDown_Arrays = By.xpath("//div[@class='dropdown-menu show']/a[1]");
-	By alertText = By.xpath("//div[@class='alert alert-primary']");
-	By signInBtn = By.xpath("//a[text()='Sign in']");
+//	By signInBtn = By.xpath("//a[text()='Sign in']");
 	By registerBtn = By.xpath("//a[text()='Register!']");
 
 	public homePageBrL getStartedBtn() {
@@ -45,19 +44,14 @@ public class HomePage_pom extends BaseClass {
 
 	}
 
-	public HomePage_pom alertText() {
-
-		driver.findElement(alertText).click();
-		return this;
-
-	}
-
+	/*
 	public loginPageBrL signInBtn() {
 
 		driver.findElement(signInBtn).click();
 		return new loginPageBrL();
 
 	}
+	*/
 
 	public registerPageBrL registerBtn() {
 

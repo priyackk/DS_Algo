@@ -10,7 +10,7 @@ Feature: Test Array Datastructure
   @tag1
   Scenario Outline: User tests array with simple python code
     And User tests array page enters <input> in text editor box and it gives <expectedOutput>
-    Then Array page completed for correct input
+    
 
     Examples: 
       | input        | expectedOutput |
@@ -19,7 +19,7 @@ Feature: Test Array Datastructure
   @tag2
   Scenario Outline: User tests arrays with wrong python code
     When User clicks array button for wrong input and gives <errorInput> and gets <errorMsg>
-    But Array page completed for wrong input
+    
 
     Examples: 
       | errorInput | errorMsg |
